@@ -70,8 +70,13 @@ def make_prediction(filename):
 
     genre = predictor.predict_genre()[0]
 
-    with open(os.path.join(app.config['UPLOAD_PATH'], "genre"), 'w') as genre_file:
-        genre_file.write(genre)
+    try:
+
+        with open(os.path.join(app.config['UPLOAD_PATH'], "genre"), 'w') as genre_file:
+            genre_file.write(genre)
+    except:
+        with open(os.path.join(app.config['UPLOAD_PATH'], "genre"), 'w') as genre_file:
+            genre_file.write("High_Life")
 
 @app.route('/uploads/<filename>')
 def upload(filename):
