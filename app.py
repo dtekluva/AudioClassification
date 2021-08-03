@@ -32,13 +32,13 @@ def validate_image(stream):
 def too_large(e):
     return "File is too large", 413
 
-@app.route('/')
-def index():
+# @app.route('/')
+# def index():
 
-    track_available = file_manager.get_avalable_track(app.config['UPLOAD_PATH'])
-    track_data      = file_manager.get_track_details(track_available) # get the first value in the list of tracks
+#     track_available = file_manager.get_avalable_track(app.config['UPLOAD_PATH'])
+#     track_data      = file_manager.get_track_details(track_available) # get the first value in the list of tracks
 
-    return render_template('index.html', track = track_data )
+#     return render_template('index.html', track = track_data )
 
 @app.route('/', methods=['POST'])
 def upload_files():
