@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="{{ url_for('static_files', filename ='style.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static_files', filename ='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -85,7 +85,7 @@
     </div>
     
   </div>
-  <div class="wrapper" id="app">
+  <!-- <div class="wrapper" id="app">
     <audio src="{{ url_for('upload', filename = track.get('raw_name')) }} "></audio>
     <div class="player">
       <div class="player__top">
@@ -130,19 +130,12 @@
             <div class="album-info__track">{{track.get("artist")}}</div>
             <div class="album-info__track">Prediction : <span id="genre">{{track.get("genre")}}</span></div>
           </div>
-          <!-- <div class="progress__duration">3:04</div> -->
         </div>
-        <!-- <div class="progress__bar" @click="clickProgress">
-          <div id="track_progress" class="progress__current" style=" width : 0% "></div>
-        </div> -->
         <div id="equalize" class="progress__time">Optimizing ...</div>
       </div>
       <div v-cloak></div>
     </div>
-    <!-- <a href="https://github.com/muhammederdem/mini-player" target="_blank" class="github-btn">
-      See on GitHub
-    </a> -->
-  </div>
+  </div> -->
 
   <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
@@ -199,6 +192,6 @@
   <form action="{{ url_for('upload_files') }}" class="dropzone">
   </form>
 </body>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>
-<script src="{{ url_for('static_files', filename ='main.js') }}"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>
+<script src="{{ url_for('static_files', filename ='main.js') }}"></script>
 </html>
