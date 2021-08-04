@@ -80,20 +80,20 @@ var biquadFilterFrequencySlider = document.querySelector('#biquadFilterFrequency
 var biquadFilterDetuneSlider = document.querySelector('#biquadFilterDetuneSlider');
 var biquadFilterQSlider = document.querySelector('#biquadFilterQSlider');
 
-biquadFilterFrequencySlider.oninput = function(evt){
-    filterNode.frequency.value = parseFloat(evt.target.value);
-    console.log(evt.target.value)
-};
+// biquadFilterFrequencySlider.oninput = function(evt){
+//     filterNode.frequency.value = parseFloat(evt.target.value);
+//     console.log(evt.target.value)
+// };
 
-biquadFilterDetuneSlider.oninput = function(evt){
-    filterNode.detune.value = parseFloat(evt.target.value);
-    console.log(evt.target.value)
-};
+// biquadFilterDetuneSlider.oninput = function(evt){
+//     filterNode.detune.value = parseFloat(evt.target.value);
+//     console.log(evt.target.value)
+// };
 
-biquadFilterQSlider.oninput = function(evt){
-    filterNode.Q.value = parseFloat(evt.target.value);
-    console.log(evt.target.value)
-};
+// biquadFilterQSlider.oninput = function(evt){
+//     filterNode.Q.value = parseFloat(evt.target.value);
+//     console.log(evt.target.value)
+// };
 
 
 var equalizeTrack = (tune_list)=>{
